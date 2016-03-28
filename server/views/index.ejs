@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="spidymq.consumer">
+<head>
+    <title>SpidyMQ Consumer</title>
+    <link rel="stylesheet" href="css/vendors.css" />
+    <link rel="stylesheet" href="css/consumer.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                    <div class="text-center">
+                        <h1>Consumer</h1>
+                        <h4><%= consumerName %></h4>
+                    </div>
+
+                    <p>
+                        This web application provides visualizations over a task consumer. This task consumer parses
+                        and solves simple math problems that get assigned to it from a message queue. Enjoy!
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <ui-view></ui-view>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/consumer.js"></script>
+</body>
+</html>
